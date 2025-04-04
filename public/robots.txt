@@ -1,3 +1,9 @@
+# *
 User-agent: *
 Allow: /
-Sitemap: https://your-domain.com/sitemap.xml 
+
+# Host
+Host: https://cenvi-launch-five.vercel.app/
+
+# Sitemaps
+Sitemap: https://cenvi-launch-five.vercel.app/sitemap.xml
