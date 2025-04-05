@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import TopHeader from "./components/TopHeader";
+import Header from "@/app/components/Header";
+import Footer from "@/app/components/Footer";
+import TopHeader from "@/app/components/TopHeader";
 import SEO from "./components/SEO";
 
 import "./globals.css";
@@ -15,18 +15,10 @@ export const metadata = {
 };
 
 interface LayoutProps {
-  title: string;
-  description: string;
-  keywords: string;
   children: React.ReactNode;
 }
 
-export default function RootLayout({
-  children,
-  title,
-  description,
-  keywords,
-}: LayoutProps) {
+export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <SEO />
