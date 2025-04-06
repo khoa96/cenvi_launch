@@ -1,9 +1,8 @@
 import { Inter } from "next/font/google";
-import Header from "@/app/components/Header";
-import Footer from "@/app/components/Footer";
-import TopHeader from "@/app/components/TopHeader";
-import SEO from "./components/SEO";
-
+import Footer from "@/components/shares/Footer";
+import SEO from "../components/shares/SEO";
+import Navbar from "@/components/shares/Navbar";
+import UnderText from "../components/shares/UnderText";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -23,9 +22,12 @@ export default function RootLayout({ children }: LayoutProps) {
     <html lang="en">
       <SEO />
       <body className={inter.className}>
-        <TopHeader />
-        <Header />
+        {/* <Header /> */}
+        <Navbar />
         <main>{children}</main>
+        <UnderText size={60} text="Miễn phí" />
+
+        <UnderText size={48} text="3 bước" />
         <Footer />
       </body>
     </html>

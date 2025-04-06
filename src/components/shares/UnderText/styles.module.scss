@@ -1,0 +1,23 @@
+.underlineContainer {
+  position: relative;
+  display: inline-block; /* Để gạch dưới chỉ rộng bằng văn bản */
+}
+
+.text {
+  font-size: 50px; /* Kích thước chữ */
+  font-weight: bold; /* Đậm chữ */
+  position: relative; /* Để có thể sử dụng pseudo-element */
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 1px; /* Điều chỉnh khoảng cách từ văn bản đến gạch */
+    width: 100%; /* Chiều rộng bằng 100% của văn bản */
+    height: 20px; /* Chiều cao của gạch */
+    background-image: url("/images/dash.png"); /* Đường dẫn đến hình ảnh gạch */
+    background-size: cover;
+    background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+    z-index: -1; /* Đặt gạch dưới văn bản */
+  }
+}

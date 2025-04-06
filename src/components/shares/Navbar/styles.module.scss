@@ -1,0 +1,186 @@
+// app/components/Navbar/Navbar.module.scss
+
+.header {
+  background: #fffbf4;
+  box-shadow: 0 1px 0 #f2f4f7;
+  position: sticky; // Sticky Navbar
+  z-index: 50;
+  top: 0;
+}
+
+.container {
+  max-width: 1224px;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    padding: 20px 16px;
+  }
+}
+
+.navDesktop {
+  display: flex;
+  gap: 1.5rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.navItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    color: #667085;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 24px; /* 150% */
+    &:hover {
+      color: #2f1110;
+    }
+  }
+
+  .hasSubmenu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #667085;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 24px; /* 150% */
+    cursor: pointer;
+    position: relative;
+    transition: all 0.5s ease;
+
+    &:hover .submenu {
+      display: block;
+    }
+  }
+
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fffbf4;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 1rem;
+    min-width: 300px;
+
+    a {
+      display: block;
+      color: #667085;
+      font-size: 16px;
+      font-style: normal;
+      line-height: 24px; /* 150% */
+      padding: 0.25rem 0;
+
+      &:hover {
+        color: #6d2c20;
+      }
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+
+  .login {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+  }
+
+  .signup {
+    background: #f59e0b;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: none;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.menuToggle {
+  display: none;
+  background: none;
+  border: none;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+.mobileMenu {
+  background-color: #2f1110;
+  padding: 24px 12px;
+  color: #fff;
+
+  .mobileItem {
+    width: 100%;
+    padding: 12px 0;
+
+    a {
+      color: #fff9f0;
+      font-weight: 500;
+      display: block;
+      text-decoration: none;
+    }
+
+    .mobileDropdown {
+      cursor: pointer;
+      .dropdownTitle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.25rem;
+        font-weight: 500;
+      }
+
+      .mobileSubmenuItem {
+        display: flex;
+        flex-direction: column;
+        padding: 12px 0;
+        gap: 8px;
+      }
+      .mobileSubmenu {
+        background-color: #fffbf4;
+        padding: 16px;
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        a {
+          color: #000;
+
+          .subItemTitle {
+            font-weight: bold;
+          }
+
+          .subItemDesc {
+            font-size: 0.875rem;
+            color: #555;
+          }
+        }
+      }
+    }
+  }
+  .listButtonForMobile {
+    display: flex;
+    margin-top: 32px;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
