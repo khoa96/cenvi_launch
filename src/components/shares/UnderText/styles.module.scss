@@ -1,11 +1,11 @@
 .underlineContainer {
   position: relative;
+  // border: 1px solid green;
   display: inline-block; /* Để gạch dưới chỉ rộng bằng văn bản */
 }
 
 .text {
-  font-size: 50px; /* Kích thước chữ */
-  font-weight: bold; /* Đậm chữ */
+  // font-size: 60px;
   position: relative; /* Để có thể sử dụng pseudo-element */
 
   &::after {

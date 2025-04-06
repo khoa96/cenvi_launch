@@ -2,16 +2,13 @@ import styles from "./styles.module.scss";
 
 interface UnderTextProps {
   text: string;
-  size: number;
 }
 
-const UnderText = ({ text, size }: UnderTextProps) => {
+const UnderText = ({ text }: UnderTextProps) => {
   return (
-    <div className={styles.underlineContainer}>
-      <span className={styles.text} style={{ fontSize: size }}>
-        {text}
-      </span>
-    </div>
+    <span className={styles.underlineContainer}>
+      <span className={styles.text}>{text}</span>
+    </span>
   );
 };
 

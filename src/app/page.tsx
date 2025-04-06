@@ -1,7 +1,11 @@
-import "../styles/commons.scss";
+import Home from "@/app/home/page";
 
-const HomePage = () => {
-  return <div className="container">Home page</div>;
+const Page = () => {
+  return (
+    <>
+      <Home />
+    </>
+  );
 };
 
-export default HomePage;
+export default Page;
