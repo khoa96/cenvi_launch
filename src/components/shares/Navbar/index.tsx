@@ -93,13 +93,13 @@ export default function Navbar() {
         <div className={styles.buttons}>
           <Button
             variant="outline"
+            size="md"
             className="bg-white text-[hsl(var(--text-primary))] border border-border"
           >
             Đăng nhập
           </Button>
 
-          {/* Button 2: nền primary, chữ trắng */}
-          <Button className="bg-primary text-primary-foreground">
+          <Button className="bg-primary text-primary-foreground" size="md">
             Bắt đầu ngay!
           </Button>
         </div>
@@ -160,13 +160,15 @@ export default function Navbar() {
           <div className={styles.listButtonForMobile}>
             <Button
               variant="outline"
+              size="md"
               className="bg-white text-[hsl(var(--text-primary))] border border-border w-full"
             >
               Đăng nhập
             </Button>
-
-            {/* Button 2: nền primary, chữ trắng */}
-            <Button className="bg-primary text-primary-foreground w-full">
+            <Button
+              className="bg-primary text-primary-foreground w-full"
+              size="md"
+            >
               Bắt đầu ngay!
             </Button>
           </div>
