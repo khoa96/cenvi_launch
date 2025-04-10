@@ -1,0 +1,151 @@
+@import "/src/styles/globals.scss";
+
+.pricingBlock {
+  :global {
+    .pricing-content {
+      display: flex;
+      flex-direction: column;
+      gap: 64px;
+
+      @include mq(max_md) {
+        gap: 48px;
+      }
+
+      .common-description {
+        max-width: 766px;
+      }
+
+      .top-content {
+      }
+      .list-pricing {
+        display: flex;
+        gap: 32px;
+
+        @include mq(max_md) {
+          gap: 24px;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+.priceItemWrapper {
+  width: calc((100% - 64px) / 3);
+  height: 148px;
+
+  @include mq(max_md) {
+    width: 100%;
+    border: 1px solid green;
+  }
+}
+.card {
+  position: relative;
+  padding: 40px 32px 32px;
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 16px;
+  z-index: 100;
+
+  @include mq(max_md) {
+    padding: 32px 24px 24px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    padding: 2px;
+    background: linear-gradient(to bottom, #cbd5e1, rgba(203, 213, 225, 0.05));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    z-index: 1;
+  }
+}
+
+.popular::before {
+  background: linear-gradient(
+    to bottom,
+    #f90,
+    rgba(255, 153, 0, 0.05)
+  ) !important;
+}
+
+.label {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f90;
+  color: white;
+  font-weight: bold;
+  padding: 6px 14px;
+  font-size: 13px;
+  z-index: 2;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.title {
+  color: var(--Gray-900, #101828);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 44px;
+  letter-spacing: -0.72px;
+  margin: 16px 0px;
+}
+
+.subTitle {
+  color: var(--Gray-500, #667085);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 32px;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.featureItem {
+  color: var(--Gray-500, #667085);
+  width: 100%;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  text-align: left;
+  line-height: 24px;
+  margin-bottom: 16px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #eaecf0;
+  margin: 24px 0;
+}
+
+.cardFooter {
+  width: 100%;
+  margin-top: 32px;
+  position: relative;
+  z-index: 999999;
+}

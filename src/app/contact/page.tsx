@@ -1,9 +1,12 @@
 // src/app/page.tsx
+import Banner from "../home/Banner";
+import Feature from "../home/Feature";
 
 const ContactPage = () => {
   return (
     <div>
-      <h1>CONTACT</h1>
+      <Banner />
+      <Feature />
     </div>
   );
 };

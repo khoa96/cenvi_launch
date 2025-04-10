@@ -1,0 +1,66 @@
+.listServiceSection {
+  width: 100%;
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  /* Sử dụng grid cho bố cục icon */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+
+  /* 
+    Có 8 item (theo ví dụ) -> 2 hàng x 4 cột (nếu màn hình đủ lớn).
+    Tuỳ chỉnh lại cột, gap, padding, v.v... theo ý bạn.
+  */
+}
+
+/* Responsive cho mobile hoặc tablet */
+@media (max-width: 992px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.serviceItem {
+  text-align: center;
+  padding: 20px;
+  transition: all 0.2s ease-in-out;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: #f9f9f9;
+  }
+
+  .iconWrapper {
+    margin-bottom: 12px;
+    img {
+      max-width: 48px;
+      height: auto;
+    }
+  }
+
+  .title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #111;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #666;
+  }
+}

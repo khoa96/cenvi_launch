@@ -1,0 +1,66 @@
+.createCompanyBlock {
+  .topBlock {
+    position: relative;
+    width: 100%;
+    height: 480px;
+
+    @include mq(max_md) {
+      height: 360px;
+    }
+
+    @media (max-width: 375px) {
+      height: 240px;
+    }
+  }
+
+  .imageWrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .imageContent {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+      color: #fff;
+      text-align: center;
+
+      /* Text/Display lg/Semibold */
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 60px; /* 125% */
+      letter-spacing: -0.96px;
+
+      @include mq(max_md) {
+        text-align: center;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 38px; /* 126.667% */
+      }
+
+      @media (max-width: 500px) {
+        max-width: 343px;
+      }
+    }
+  }
+}
+
+.listStepWrapper {
+  width: 100%;
+  border: 1px solid red;
+  padding: 96px 0px;
+
+  @include mq(max_md) {
+    padding: 64px 0px;
+  }
+}

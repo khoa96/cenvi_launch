@@ -19,5 +19,9 @@
     background-size: cover;
     background-repeat: no-repeat; /* Không lặp lại hình ảnh */
     z-index: -1; /* Đặt gạch dưới văn bản */
+
+    @media (max-width: 768px) {
+      height: 15px;
+    }
   }
 }

@@ -1,19 +1,23 @@
+"use client";
+
 import UnderText from "@/components/shares/UnderText";
 import { Button } from "@/components/ui/button";
 import { PlayCircle } from "lucide-react";
 import Image from "next/image";
+import clsx from "clsx";
+import styles from "./styles.module.scss";
 
 const Banner = () => {
   return (
-    <div className="banner__wrapper">
+    <div className={clsx([styles.bannerWrapper, "common-layout"])}>
       <div className="container">
         <div className="banner__content">
-          <div className="column">
-            <h1 className="title">
+          <div className="column-50">
+            <h1 className="common-title">
               Dễ dàng thành lập doanh nghiệp. <UnderText text="Miễn phí" /> và
               từ xa.
             </h1>
-            <p className="description">
+            <p className="common-description">
               Chúng tôi là công ty tư vấn, dịch vụ trọn gói, chuyên cung cấp các
               giải pháp thiết thực với giá cả cạnh tranh.
             </p>
@@ -33,7 +37,7 @@ const Banner = () => {
               </Button>
             </div>
           </div>
-          <div className="column">
+          <div className="column-50">
             <Image
               src="/images/home/home-1.png"
               alt="home-banner"

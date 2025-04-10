@@ -1,0 +1,108 @@
+@import "/src/styles/globals.scss";
+
+.featureBlock {
+  padding: 96px 0px;
+  border: 1px solid red;
+  @include mq(max_md) {
+    padding: 64px 0px;
+  }
+
+  :global {
+    .feature-content {
+      border: 1px solid blue;
+      display: flex;
+      gap: 150px;
+      align-items: center;
+
+      @include mq(max_md) {
+        flex-direction: column;
+        gap: 48px;
+      }
+      .common-sub-title {
+        margin-bottom: 20px;
+        max-width: 568px;
+
+        @include mq(max_md) {
+          margin-bottom: 16px;
+          max-width: 100%;
+        }
+      }
+
+      .common-description {
+        max-width: 568px;
+        @include mq(max_md) {
+          max-width: 100%;
+        }
+      }
+
+      .top-block {
+        border: 1px solid red;
+        display: flex;
+        margin-bottom: 32px;
+
+        @include mq(max_md) {
+          margin-bottom: 24px;
+        }
+
+        .number-block {
+          width: calc((100% - 16px) / 2);
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+
+          @include mq(max_md) {
+            gap: 0;
+          }
+        }
+
+        .number {
+          color: var(--Gray-900, #101828);
+          font-size: 60px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 72px; /* 120% */
+          letter-spacing: -1.2px;
+          display: inline-block;
+
+          @include mq(max_md) {
+            font-size: 48px;
+            line-height: 60px; /* 125% */
+            letter-spacing: -0.96px;
+          }
+        }
+
+        .text {
+          color: var(--Gray-500, #667085);
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 28px; /* 155.556% */
+
+          @include mq(max_md) {
+            font-size: 18px;
+          }
+        }
+      }
+
+      .bottom-block {
+        display: flex;
+        align-items: center;
+
+        button {
+          text-decoration: none;
+        }
+
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+
+    .feature-image {
+      border: 1px solid green;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
